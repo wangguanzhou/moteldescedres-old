@@ -5,4 +5,5 @@ from django.shortcuts import render
 
 def homepage(request):
     context = {}
-    return render(request, "sitenotready.html", context)
+    return render(request, "base.html", context)
+
