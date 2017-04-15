@@ -78,9 +78,44 @@
 
    
   <div class="container">
+  <div class="row" name="row-1">
     <div class="alert alert-info">
       <strong>Note</strong> This site is under re-design and re-construction. Coming up soon!
     </div>
+  </div> <!-- row-1 -->
+
+  <div class="row" name="row-2">
+    <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label" for="">Check-in:</label>
+      <input type="text" class="form-control" id="checkin-datepicker" placeholder="dd/mm/yy">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="">Check-out:</label>
+      <input type="text" class="form-control" id="checkout-datepicker" placeholder="dd/mm/yy">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="">Adults</label>
+      <select class="form-control" name="num-of-adults">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="">Children</label>
+      <select class="form-control" name="num-of-children">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <div class="form-group"> 
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+    </form>
+  </div> <!-- row-2 -->
+
   <div class="row">
     <div class="col-sm-8">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -170,7 +205,7 @@
     </div> <!-- row -->
 
     <hr>
-    
+
   </div> <!-- container -->
 
 
