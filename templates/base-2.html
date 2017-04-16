@@ -49,10 +49,16 @@
       width: auto;
     }
 
+    .navbar {
+        background-color: #f4511e;
+        color: #fff;
+        padding: 20px 25px;
+    }
+
     .jumbotron {
         background-color: #f4511e;
         color: #fff;
-        padding: 100px 25px;
+        padding: 40px 25px;
     }
 
     .container-fluid {
@@ -68,7 +74,23 @@
   </head>
 
   <body>
-  <div class="jumbotron text-center">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img class="img-responsive" src="{% static 'images/motel-des-cedres/mdc_logo.png'%}" alt="mdc logo">
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="jumbotron">
     <img class="img-responsive" src="{% static 'images/motel-des-cedres/mdc_logo.png'%}" alt="mdc logo">
     <p>We specialize in blablabla</p> 
     <form class="form-inline">
