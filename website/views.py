@@ -5,5 +5,5 @@ from django.shortcuts import render
 
 def homepage(request):
     context = {}
-    return render(request, "base-2.html", context)
+    return render(request, "homepage.html", context)
 
