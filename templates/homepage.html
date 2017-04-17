@@ -1,7 +1,7 @@
 {% extends "./base-2.html" %}
 {% block searchroom %}
 
-<div class="container-fluid" style="background-color:#f4511e; padding: 10px 20px;">
+<div class="container-fluid" style="background-color:#f4511e; padding: 0px 20px;">
 <div class="row" style="color: #f5f5f5">
 <div class="col-md-2">
 </div>
@@ -15,7 +15,7 @@
             <label class="control-label" for="">Check-out:</label>
             <input type="text" class="form-control" id="checkout-datepicker" placeholder="dd/mm/yy">
         </div>
-        <div class="form-group col-sm-1">
+        <div class="form-group col-sm-2">
             <label class="control-label" for="">Adults</label>
             <select class="form-control" name="num-of-adults">
             <option value="1">1</option>
@@ -23,7 +23,7 @@
             <option value="3">3</option>
             </select>
         </div>
-        <div class="form-group col-sm-1">
+        <div class="form-group col-sm-2">
             <label class="control-label" for="">Children</label>
             <select class="form-control" name="num-of-children">
             <option value="1">1</option>
@@ -32,7 +32,7 @@
             </select>
         </div>
         <div class="form-group"> 
-            <button type="submit" class="btn btn-default" style="margin-left: 40px; margin-top: 25px;">Search</button>
+            <button type="submit" class="btn btn-default" style="margin-left: 20px; margin-top: 25px;">Search</button>
         </div>
 
     </form>
@@ -41,5 +41,38 @@
 </div>
 </div> <!-- end of row -->
 </div> <!-- end of container -->
+
+{% endblock %}
+
+{% block rooms %}
+
+<div class="container-fluid bg-grey">
+  <h2>Our Rooms</h2>
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="mdc-pic-02.jpg" alt="room type 1">
+        <p><strong>Room Type 1</strong></p>
+        <p>Two beds, ...</p>
+      </div>
+    </div>
+    <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="mdc-pic-02.jpg" alt="room type 2">
+        <p><strong>Room Type 2</strong></p>
+        <p>One bed, ...</p>
+      </div>
+    </div>
+    <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="mdc-pic-02.jpg" alt="room type 3">
+        <p><strong>Room Type 3</strong></p>
+        <p>One bed, ...</p>
+      </div>
+    </div>
+
+</div>
 
 {% endblock %}
