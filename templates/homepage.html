@@ -48,7 +48,7 @@
 
 {% block rooms %}
 
-<div class="container-fluid bg-grey">
+<div class="container-fluid text-center bg-grey">
 <div class="col-md-1">
 </div>
 <div class="col-md-10">
@@ -82,6 +82,28 @@
 <div class="col-md-1">
 </div>
 
+</div>
+
+{% endblock %}
+
+{% block attractions %}
+
+<div class="container-fluid bg-3 text-center"> 
+  <h3>Local Attractions</h3>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Lorem ipsum..</p>
+      <img src="{% static 'images/attractions/domaine_howard.jpg' %}" alt="Domaine Howard">
+    </div>
+    <div class="col-sm-4">
+      <p>Lorem ipsum..</p>
+      <img src="{% static 'images/attractions/lac_des_nations.jpg' %}" alt="Lac des Nations">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Lorem ipsum..</p>
+      <img src="{% static 'images/attractions/north_hatley.jpg' %}" alt="North Hatley">
+    </div>
+  </div>
 </div>
 
 {% endblock %}
