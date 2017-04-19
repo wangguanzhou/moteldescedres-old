@@ -1,7 +1,7 @@
 {% extends "./base-2.html" %}
 {% load static %}
 
-{% block reserve-rooms %}
+{% block home-content %}
 
 <div class="container" style="">
 
@@ -10,17 +10,17 @@
         <form class="form">
             <div class="row">
                 <div class="form-group col-sm-6">
-                    <label class="control-label" for="">Check In:</label>
+                    <label class="control-label julius-font" for="">Check In:</label>
                     <input type="text" class="form-control" id="checkin-datepicker" placeholder="dd/mm/yy">
                 </div>
                 <div class="form-group col-sm-6">
-                    <label class="control-label" for="">Check Out:</label>
+                    <label class="control-label juliu-font" for="">Check Out:</label>
                     <input type="text" class="form-control" id="checkout-datepicker" placeholder="dd/mm/yy">
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-sm-4">
-                    <label class="control-label" for="">Adults:</label>
+                    <label class="control-label julius-font" for="">Adults:</label>
                     <select class="form-control">
                         <option>1</option>
                         <option>2</option>
@@ -28,7 +28,7 @@
                     </select>
                 </div>
                 <div class="form-group col-sm-4">
-                    <label class="control-label" for="">Children:</label>
+                    <label class="control-label julius-font" for="">Children:</label>
                     <select class="form-control">
                         <option>1</option>
                         <option>2</option>
@@ -36,7 +36,7 @@
                     </select>
                 </div>
                 <div class="form-group col-sm-4">
-                    <label class="control-label" for="">Other:</label>
+                    <label class="control-label julius-font" for="">Other:</label>
                     <select class="form-control">
                         <option>1</option>
                         <option>2</option>
@@ -45,15 +45,15 @@
                 </div>
             </div>
             <div class="row text-center">
-                <button type="submit" class="btn btn-primary">  Reserve    Now  </button>
+                <button type="submit" class="btn btn-primary julius-font">  Reserve    Now  </button>
             </div>
         </form>
         <hr>
         <div id="contactus" class="">
-            <h3 class="">Contact Us</h3>
+            <h3 class="julius-font">Contact Us</h3>
             <div class="row">
                 <div class="col-sm-4">
-                    <h4 class=""><span class="glyphicon glyphicon-map-marker"></span> address</h4>
+                    <h4 class="julius-font"><span class="glyphicon glyphicon-map-marker"></span> address</h4>
                     <address>
                         6210 boul Bourque<br>
                         Sherbrooke, QC<br>
@@ -61,29 +61,45 @@
                     </address>
                 </div>
                 <div class="col-sm-3">
-                    <h4 class=""><span class="glyphicon glyphicon-phone"></span> Phone</h4>
+                    <h4 class="julius-font"><span class="glyphicon glyphicon-phone"></span> Phone</h4>
                     <address>
                         (819) 864-4322
                     </address>
                 </div>
                 <div class="col-sm-5">
-                    <h4 class=""><span class="glyphicon glyphicon-envelope"></span> Email</h4>
+                    <h4 class="julius-font"><span class="glyphicon glyphicon-envelope"></span> Email</h4>
                     <address>
                         moteldescedres@videotron.ca
                     </address>
                 </div>
             </div>
             <div class="row text-center">
-                <button class="btn btn-primary">Drop us a message</button>
+                <button class="btn btn-primary julius-font">Drop us a message</button>
             </div>
 
         </div>
     </div>
     <div class="col-md-6 bg-2" style="padding: 20px 40px 40px 40px">
-        <h3>Our Rooms</h3>
+        <h3 class="julius-font">Our Rooms</h3>
         <p>Click the picture for more details.</p>
         <img class="img-responsive center-block" src="{% static 'images/motel-des-cedres/mdc-pic-02.jpeg' %}">
     </div>
+</div>
+
+<!-- attractions, services, maps... -->
+<div class="row">
+    <div id="mdcAttractions" class="col-md-4 bg-2" style="padding: 20px 40px 40px 40px">
+        <h3 class="julius-font">Local Attractions</h3>
+        <p>Some general introductions here...Click image for more details.</p>
+        <img class="img-responsive center-block" src="{% static 'images/attractions/lac_des_nations.jpg' %}">
+    </div>
+    <div id="mdcServices" class="col-md-4">
+
+    </div>
+    <div id="mdcMaps" class="col-md-4">
+
+    </div>
+
 </div>
 
 </div> <!-- container -->
