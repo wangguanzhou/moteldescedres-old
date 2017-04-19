@@ -9,6 +9,7 @@
     <title>Motel des Cedres</title>
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.google.com/?selection.family=Julius+Sans+One" rel="stylesheet">
     <link href="{% static 'css/bootstrap-datepicker.standalone.css' %}" rel="stylesheet">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -33,6 +34,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    body {
+      font-family: 'Julius Sans One', sans-serif;
+    }
     .bg-1 { 
       background-color: #0b486b; 
       color: #f5f5f5;
@@ -59,6 +63,7 @@
     </div>
     <div class="col-md-6 bg-2" style="padding: 20px 40px 40px 40px">
       <h3>Our Rooms</h3>
+      <p>Click the picture for more details.</p>
       <img class="img-responsive center-block" src="{% static 'images/motel-des-cedres/mdc-pic-02.jpeg' %}">
     </div>
   </div>
