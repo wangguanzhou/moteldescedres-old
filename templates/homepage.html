@@ -1,109 +1,29 @@
 {% extends "./base-2.html" %}
 {% load static %}
 
-{% block searchroom %}
+{% block reserve-room %}
+<div class="row">
+    <div class="col-md-6">
+        <form class="form">
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label class="control-label" for="">Check In:</label>
+                    <input type="text" class="form-control" id="checkin-datepicker" placeholder="dd/mm/yy">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label class="control-label" for="">Check Out:</label>
+                    <input type="text" class="form-control" id="checkout-datepicker" placeholder="dd/mm/yy">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6 bg-2" style="padding: 20px 40px 40px 40px">
+        <h3>Our Rooms</h3>
+        <p>Click the picture for more details.</p>
+        <img class="img-responsive center-block" src="{% static 'images/motel-des-cedres/mdc-pic-02.jpeg' %}">
+    </div>
+</div>
 
-<div class="container-fluid" style="background-color:#f4511e; padding: 0px 20px;">
-<div class="row" style="color: #f5f5f5">
-<div class="col-md-2">
-</div>
-<div class="col-md-8">
-    <form class="form">
-        <div class="form-group col-sm-3">
-            <label class="control-label" for="">Check-in:</label>
-            <input type="text" class="form-control" id="checkin-datepicker" placeholder="dd/mm/yy">
-        </div>
-        <div class="form-group col-sm-3">
-            <label class="control-label" for="">Check-out:</label>
-            <input type="text" class="form-control" id="checkout-datepicker" placeholder="dd/mm/yy">
-        </div>
-        <div class="form-group col-sm-2">
-            <label class="control-label" for="">Adults</label>
-            <select class="form-control" name="num-of-adults">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            </select>
-        </div>
-        <div class="form-group col-sm-2">
-            <label class="control-label" for="">Children</label>
-            <select class="form-control" name="num-of-children">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            </select>
-        </div>
-        <div class="form-group"> 
-            <button type="submit" class="btn btn-default" style="margin-left: 20px; margin-top: 25px;">Search</button>
-        </div>
-
-    </form>
-</div>
-<div class="col-md-2">
-</div>
-</div> <!-- end of row -->
-</div> <!-- end of container -->
 
 {% endblock %}
 
-{% block rooms %}
-
-<div class="container-fluid text-center bg-3">
-<div class="col-md-1">
-</div>
-<div class="col-md-10">
-  <h2>Our Rooms</h2>
-  <div class="row text-center">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="{% static 'images/motel-des-cedres/mdc-pic-02.jpeg' %}" alt="room type 1">
-        <p><strong>Room Type 1</strong></p>
-        <p>Two beds, ...</p>
-      </div>
-    </div>
-    <div class="row text-center">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="{% static 'images/motel-des-cedres/mdc-pic-02.jpeg' %}" alt="room type 2">
-        <p><strong>Room Type 2</strong></p>
-        <p>One bed, ...</p>
-      </div>
-    </div>
-    <div class="row text-center">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="{% static 'images/motel-des-cedres/mdc-pic-02.jpeg' %}" alt="room type 3">
-        <p><strong>Room Type 3</strong></p>
-        <p>One bed, ...</p>
-      </div>
-    </div>
-</div>
-
-<div class="col-md-1">
-</div>
-
-</div>
-
-{% endblock %}
-
-{% block attractions %}
-
-<div class="container-fluid bg-4 text-center"> 
-  <h3>Local Attractions</h3>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum..</p>
-      <img class="img-responsive margin" style="width: 100%" src="{% static 'images/attractions/domaine_howard.jpg' %}" alt="Domaine Howard">
-    </div>
-    <div class="col-sm-4">
-      <p>Lorem ipsum..</p>
-      <img class="img-responsive margin" style="width: 100%" src="{% static 'images/attractions/lac_des_nations.jpg' %}" alt="Lac des Nations">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum..</p>
-      <img class="img-responsive margin" style="width: 100%" src="{% static 'images/attractions/domaine_howard.jpg' %}" alt="North Hatley">
-    </div>
-  </div>
-</div>
-
-{% endblock %}
