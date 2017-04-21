@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="row text-center">
-                <button type="submit" class="btn btn-primary julius-font">  Reserve    Now  </button>
+                <button type="submit" class="btn btn-primary julius-font" data-toggle="modal" data-target="reserveModal">  Reserve    Now  </button>
             </div>
         </form>
         <hr>
@@ -158,6 +158,19 @@
 
 </div> <!-- container -->
 <footer class="page-footer bg-1 text-center" style="padding: 20px;">&copy 2017 Motel des Cedres</footer>
+
+<div class="modal" id="reserveModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form>
+                    <input type="text" class="form-control"></input>
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
