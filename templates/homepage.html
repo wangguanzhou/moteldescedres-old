@@ -91,7 +91,18 @@
         <img class="img-responsive" src="{% static 'images/motel-des-cedres/mdc-pic-02.jpeg' %}">
     </div>
 </div>
-
+<div class="modal" id="reserveModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form>
+                    <input type="text" class="form-control"></input>
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- attractions, services, maps... -->
 <div class="row bg-2" style="padding: 0px 20px 40px 20px">
 <div class="bg-0">
@@ -159,18 +170,6 @@
 </div> <!-- container -->
 <footer class="page-footer bg-1 text-center" style="padding: 20px;">&copy 2017 Motel des Cedres</footer>
 
-<div class="modal" id="reserveModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <form>
-                    <input type="text" class="form-control"></input>
-                    <button class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 {% endblock %}
 
