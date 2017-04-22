@@ -13,6 +13,7 @@
             </div>
             <div class="modal-body">
                 <form class="form" id="reserveForm-2">
+                    {% csrf_token %}
                     <div class="row">
                         <div class="form-group col-xs-6 col-sm-6">
                             <label class="control-label julius-font" for="">First Name:</label>
@@ -54,6 +55,7 @@
     <div class="col-md-6 bg-0 no-padding"> 
         <div class="bg-2" style="padding: 0px 10px 10px 10px">
         <form class="form" id="reserveForm-1">
+            {% csrf_token %}
             <div class="row">
                 <div class="form-group col-xs-6 col-sm-6">
                     <label class="control-label julius-font" for="">Check In:</label>
