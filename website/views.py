@@ -18,7 +18,9 @@ def homepage(request):
         reserveData['numOfChildren'] = request.POST['numOfChildren']
 
         context['reserveTime'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        context['reserveData'] = reserveData;
+        context['reserveData'] = reserveData
+        
+        return render(request, "reserveresponse.html", context)
 
     else:
         context = {}
