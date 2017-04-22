@@ -28,7 +28,23 @@
           $("#reserveBtn").click( function() {
               var reserveData = $("#reserveForm-1, #reserveForm-2").serialize();
               console.log(reserveData);
-              alert(reserveData);
+              $.ajax({
+                  url: '/',
+                  type: 'POST',
+                  data: reserveData,
+                  async: false,
+                  cache: false,
+                  contentType: false,
+                  processData: false,
+                  success: function () {
+                      alert('Form Submitted!');
+                  },
+                  error: function(){
+                      alert("error in ajax form submission");
+                  }
+              });
+
+              return false;
           });
       });
     </script>
