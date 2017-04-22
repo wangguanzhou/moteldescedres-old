@@ -34,7 +34,6 @@
                   data: reserveData,
                   
                   success: function () {
-                      alert('Form Submitted!');
                   },
                   error: function(){
                       alert("error in ajax form submission");
@@ -113,6 +112,9 @@
 </div>
 
   {% block home-content %}
+  {% endblock %}
+
+  {% block reserve-response %}
   {% endblock %}
 
 </body>
