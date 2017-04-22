@@ -25,6 +25,11 @@
           $('#checkout-datepicker').datepicker({
               format: "dd/mm/yyyy"
           });
+          $("#reserveBtn").click( function() {
+              var reserveData = $("#reserveForm-1, #reserveForm-2").serialize();
+              console.log('reserveData');
+              alert(reserveData);
+          });
       });
     </script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
