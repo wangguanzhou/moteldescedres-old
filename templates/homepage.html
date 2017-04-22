@@ -12,7 +12,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form class="form">
+                <form class="form" id="reserveForm-2">
                     <div class="row">
                         <div class="form-group col-xs-6 col-sm-6">
                             <label class="control-label julius-font" for="">First Name:</label>
@@ -50,6 +50,8 @@
 
 <script>
     $("#reserveBtn").click( function() {
+        var reserveData = $("#reserveForm-1, #reserveForm-2").serialize();
+        console.log(reserveData);
         alert("reserve button is clicked");
     });
 </script>
@@ -57,7 +59,7 @@
 <div class="row bg-2" style="padding: 20px 20px 0px 20px">
     <div class="col-md-6 bg-0 no-padding"> 
         <div class="bg-2" style="padding: 0px 10px 10px 10px">
-        <form class="form">
+        <form class="form" id="reserveForm-1">
             <div class="row">
                 <div class="form-group col-xs-6 col-sm-6">
                     <label class="control-label julius-font" for="">Check In:</label>
