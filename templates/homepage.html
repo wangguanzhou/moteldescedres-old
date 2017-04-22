@@ -48,13 +48,7 @@
     </div>
 </div>
 
-<script>
-    $("#reserveBtn").click( function() {
-        var reserveData = $("#reserveForm-1, #reserveForm-2").serialize();
-        console.log('reserveData');
-        alert(reserveData);
-    });
-</script>
+
 
 <div class="row bg-2" style="padding: 20px 20px 0px 20px">
     <div class="col-md-6 bg-0 no-padding"> 
@@ -208,6 +202,12 @@
 </div> <!-- container -->
 <footer class="page-footer bg-1 text-center" style="padding: 20px;">&copy 2017 Motel des Cedres</footer>
 
-
+<script>
+    $("#reserveBtn").click( function() {
+        var reserveData = $("#reserveForm-1, #reserveForm-2").serialize();
+        console.log('reserveData');
+        alert(reserveData);
+    });
+</script>
 {% endblock %}
 
