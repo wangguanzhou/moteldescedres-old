@@ -34,8 +34,9 @@
                   type: 'POST',
                   data: reserveData,
                   
-                  success: function () {
+                  success: function (content) {
                     $("#reserveModal").hide();
+                    $("body").html(content)
                   },
                   error: function(){
                       alert("error in ajax form submission");
