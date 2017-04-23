@@ -4,7 +4,7 @@ from datetime import datetime
 # Create your views here.
 
 def homepage(request):
-    if request.POST:
+    if request.is_ajax():
         context = {}
         reserveData = {}
         reserveData['firstName'] = request.POST['firstName']
