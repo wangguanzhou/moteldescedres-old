@@ -24,5 +24,5 @@ def homepage(request):
 
     else:
         context = {}
-        return render(request, "homepage.html", context)
+        return render(request, "reserveresponse.html", context)
 
