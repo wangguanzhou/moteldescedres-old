@@ -7,7 +7,6 @@ from datetime import datetime
 def homepage(request):
     if request.is_ajax():
         context = {}
-        return HttpResponse("<p>test</p>")
         reserveData = {}
         reserveData['firstName'] = request.POST['firstName']
         reserveData['lastName'] = request.POST['lastName']
@@ -22,6 +21,7 @@ def homepage(request):
         context['reserveTime'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         context['reserveData'] = reserveData
         
+        return render(request, "reserveresponse.html", context)
 
     else:
         context = {}
