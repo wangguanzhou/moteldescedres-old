@@ -4,9 +4,40 @@
 {% block reserve-response %}
 
 <div class="container" style="">
-
-<p> {{ reserveTime }} </p>
-<p> {{ reserveData.firstName }} {{ reserveData.lastName }} </p>
+    <div class="jumbotron">
+        <h3 class="julius-font">Thanks for your reservation!</h3> 
+        <p>Dear Mr./Mrs.{{ reserveData.lastName }}, </p>
+        <p>We have received your reservation request as the following:</p>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>Check-in Date:</td>
+                <td>{{ reserveData.checkinDate }}</td>
+            </tr>
+            <tr>
+                <td>Check-out Date:</td>
+                <td>{{ reserveData.checkinDate }}</td>
+            </tr>
+            <tr>
+                <td>Adults:</td>
+                <td>{{ reserveData.numOfAdults }}</td>
+            </tr>
+            <tr>
+                <td>Children:</td>
+                <td>{{ reserveData.numOfChildren }}</td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td>{{ reserveData.phoneNo }}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{ reserveData.email }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <p> We will be contacting you very soon to confirm your reservation. </p>
+    </div>
 </div>
 
 {% endblock %}
