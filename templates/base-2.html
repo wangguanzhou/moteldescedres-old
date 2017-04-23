@@ -25,7 +25,7 @@
           $('#checkout-datepicker').datepicker({
               format: "dd/mm/yyyy"
           });
-          $("#reserveForm-2").on('submit', function(event) {
+          $("#reserveBtn").click( function(event) {
               event.preventDefault();
               var reserveData = $("#reserveForm-1, #reserveForm-2").serialize();
               console.log(reserveData);
