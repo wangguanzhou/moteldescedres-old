@@ -22,6 +22,13 @@ def homepage(request):
 
         context['reserveTime'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         context['reserveData'] = reserveData
+
+        emailSubject = 'New reservation by ' + reserveData['firstName'] + ' ' + reserveData['lastName'] + ' via moteldescedres.ca'
+        emailBody = render_to_string('reserve_notification.txt', context)
+        emailFrom = 'admin@moteldescedres.ca'
+        emailTo = 'alexwang74@gmail.com'
+        
+        send_mail(emailSubject, 'test', emailFrom, [emailTo], fail_silently=False)
         
         return render(request, "reserveresponse.html", context)
 
