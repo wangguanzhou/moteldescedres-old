@@ -13,7 +13,7 @@ def sendSMSviaNexmo(smsContent):
         'api_secret': 'f44647eee9a437f0',
         'to': '15147757799',
         'from': '12264063982',
-        'text': 'reserve notification received.'
+        'text': smsContent
     }
 
     url = 'https://rest.nexmo.com/sms/json?' + urllib.parse.urlencode(params)
@@ -50,6 +50,7 @@ def homepage(request):
         emailTo2 = 'alexwang74@gmail.com'
         
         send_mail(emailSubject, emailBody, emailFrom, [emailTo2], fail_silently=False)
+        smsContent = 'There is a new reservation request from' + reserveData['lastName'] + '(' + reserveData['phoneNo'] + ' Check your mail.'
         sendSMSviaNexmo('...')
         return render(request, 'reserve_notification.txt', context)
 
