@@ -4,6 +4,7 @@ from datetime import datetime
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 import urllib
+from urllib.request import urlopen
 
 # Create your views here.
 def sendSMSviaNexmo(smsContent):
