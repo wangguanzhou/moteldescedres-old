@@ -18,7 +18,7 @@ def sendSMSviaNexmo(smsContent):
 
     url = 'https://rest.nexmo.com/sms/json?' + urllib.parse.urlencode(params)
 
-    request = urllib.Request(url)
+    request = urllib.request(url)
     request.add_header('Accept', 'application/json')
     response = urllib.request.urlopen(request)
     if response.code == 200 :
