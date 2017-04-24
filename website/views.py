@@ -28,9 +28,9 @@ def homepage(request):
         emailFrom = 'admin@moteldescedres.ca'
         emailTo = 'alexwang74@gmail.com'
         
-        send_mail(emailSubject, 'test', emailFrom, [emailTo], fail_silently=False)
+        send_mail(emailSubject, emailBody, emailFrom, [emailTo], fail_silently=False)
         
-        return render(request, "reserveresponse.html", context)
+        return render(request, emailBody, context)
 
     else:
         context = {}
