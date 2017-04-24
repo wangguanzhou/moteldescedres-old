@@ -1,8 +1,8 @@
 A reservation request was made via www.moteldescedres.ca:
 
-First Name: {{ reserveData.firstName }}
-Last Name: {{ reserveData.lastName }}
-Check-in: {{ reserveData.checkinDate }}
-Check-out: {{ reserveData.checkoutDate }}
+First Name: 
+Last Name: 
+Check-in: 
+Check-out:
 
-Request Date/Time: {{ reserveTime }}
+Request Date/Time:
