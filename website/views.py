@@ -3,9 +3,29 @@ from django.http import HttpResponse
 from datetime import datetime
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
+import urllib
+import urllib2
 
 # Create your views here.
+def sendSMSviaNexmo(smsContent):
+    params = {
+        'api_key': '8f27294a',
+        'api_secret': 'f44647eee9a437f0',
+        'to': '15147757799',
+        'from': '441632960961',
+        'text': 'reserve notification received.'
+    }
 
+    url = 'https://rest.nexmo.com/sms/json?' + urllib.urlencode(params)
+
+    request = urllib2.Request(url)
+    request.add_header('Accept', 'application/json')
+    response = urllib2.urlopen(request)
+    if response.code == 200 :
+        print "success"
+    else:
+        print "failure"
+        
 def homepage(request):
     if request.is_ajax():
         context = {}
@@ -26,10 +46,11 @@ def homepage(request):
         emailSubject = 'New reservation by ' + reserveData['firstName'] + ' ' + reserveData['lastName'] + ' via moteldescedres.ca'
         emailBody = render_to_string('reserve_notification.txt', context)
         emailFrom = 'admin@moteldescedres.ca'
-        emailTo = 'alexwang74@gmail.com'
+        emailTo1 = 'moteldescedres@videotron.ca'
+        emailTo2 = 'alexwang74@gmail.com'
         
-        send_mail(emailSubject, emailBody, emailFrom, [emailTo], fail_silently=False)
-        
+        send_mail(emailSubject, emailBody, emailFrom, [emailTo1, emailTo2], fail_silently=False)
+        sendSMSviaNexmo('...')
         return render(request, 'reserve_notification.txt', context)
 
     else:
