@@ -12,7 +12,7 @@ def sendSMSviaNexmo(smsContent):
         'api_key': '8f27294a',
         'api_secret': 'f44647eee9a437f0',
         'to': '15147757799',
-        'from': '15147757799',
+        'from': '12264063982',
         'text': 'reserve notification received.'
     }
 
@@ -49,7 +49,7 @@ def homepage(request):
         emailTo1 = 'moteldescedres@videotron.ca'
         emailTo2 = 'alexwang74@gmail.com'
         
-        send_mail(emailSubject, emailBody, emailFrom, [emailTo1, emailTo2], fail_silently=False)
+        send_mail(emailSubject, emailBody, emailFrom, [emailTo2], fail_silently=False)
         sendSMSviaNexmo('...')
         return render(request, 'reserve_notification.txt', context)
 
