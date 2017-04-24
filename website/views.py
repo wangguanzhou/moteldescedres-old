@@ -22,10 +22,10 @@ def sendSMSviaNexmo(smsContent):
     request.add_header('Accept', 'application/json')
     response = urllib2.urlopen(request)
     if response.code == 200 :
-        print "success"
+        print('success')
     else:
-        print "failure"
-        
+        print('failure')
+
 def homepage(request):
     if request.is_ajax():
         context = {}
