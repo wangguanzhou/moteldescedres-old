@@ -16,11 +16,11 @@ def sendSMSviaNexmo(smsContent):
         'text': 'reserve notification received.'
     }
 
-    url = 'https://rest.nexmo.com/sms/json?' + urllib.urlencode(params)
+    url = 'https://rest.nexmo.com/sms/json?' + urllib.parse.urlencode(params)
 
     request = urllib.Request(url)
     request.add_header('Accept', 'application/json')
-    response = urllib.urlopen(request)
+    response = urllib.request.urlopen(request)
     if response.code == 200 :
         print('success')
     else:
