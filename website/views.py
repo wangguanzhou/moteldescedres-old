@@ -51,7 +51,7 @@ def homepage(request):
         
         send_mail(emailSubject, emailBody, emailFrom, [emailTo2], fail_silently=False)
         smsContent = 'There is a new reservation request from' + reserveData['lastName'] + '(' + reserveData['phoneNo'] + ' Check your mail.'
-        sendSMSviaNexmo('...')
+        sendSMSviaNexmo(smsContent)
         return render(request, 'reserve_notification.txt', context)
 
     else:
