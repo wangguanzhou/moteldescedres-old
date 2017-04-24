@@ -30,7 +30,7 @@ def homepage(request):
         
         send_mail(emailSubject, emailBody, emailFrom, [emailTo], fail_silently=False)
         
-        return render(request, emailBody, context)
+        return render(request, 'reserve_notification.txt', context)
 
     else:
         context = {}
