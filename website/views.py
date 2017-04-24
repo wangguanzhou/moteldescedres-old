@@ -4,7 +4,6 @@ from datetime import datetime
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 import urllib
-import urllib2
 
 # Create your views here.
 def sendSMSviaNexmo(smsContent):
@@ -18,9 +17,9 @@ def sendSMSviaNexmo(smsContent):
 
     url = 'https://rest.nexmo.com/sms/json?' + urllib.urlencode(params)
 
-    request = urllib2.Request(url)
+    request = urllib.Request(url)
     request.add_header('Accept', 'application/json')
-    response = urllib2.urlopen(request)
+    response = urllib.urlopen(request)
     if response.code == 200 :
         print('success')
     else:
