@@ -12,7 +12,7 @@ def sendSMSviaNexmo(smsContent):
         'api_key': '8f27294a',
         'api_secret': 'f44647eee9a437f0',
         'to': '15147757799',
-        'from': '441632960961',
+        'from': '15147757799',
         'text': 'reserve notification received.'
     }
 
