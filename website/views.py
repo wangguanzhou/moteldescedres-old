@@ -50,7 +50,7 @@ def homepage(request):
         emailTo2 = 'alexwang74@gmail.com'
         
         send_mail(emailSubject, emailBody, emailFrom, [emailTo2], fail_silently=False)
-        smsContent = 'There is a new reservation request from ' + reserveData['firstName'] + ' ' + reserveData['lastName'] + '(' + reserveData['phoneNo'] + ') Check your mail.'
+        smsContent = 'There is a new reservation request from ' +  ' ' + reserveData['lastName'] + '(' + reserveData['phoneNo'] + ') Check your mail.'
         sendSMSviaNexmo(smsContent)
         return render(request, 'reserveresponse.html', context)
 
