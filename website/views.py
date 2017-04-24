@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
 
 # Create your views here.
 
